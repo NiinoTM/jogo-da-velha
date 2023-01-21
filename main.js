@@ -7,10 +7,8 @@ while(contador < 9){
     const boxElement = boxList[contador];
     console.log(clickCounter);
 
-    while(clickCounter < 9){
-        boxElement.onclick = function(){
-            contador += 1
-        }
+    if(boxElement.onclick != null ){
+        clickCounter++
     }
 
     if(clickCounter == 0 || clickCounter == 2 || clickCounter == 4 || clickCounter == 6 || clickCounter == 8){
