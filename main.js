@@ -1,15 +1,17 @@
-const boxList = document.querySelectorAll('.box')
 let contador = 0
 let clickCounter = 0
+const boxList = document.querySelectorAll('.box')
 
 
 while(contador < 9){
     const boxElement = boxList[contador];
-    console.log(clickCounter);
 
-    if(boxElement.onclick != null ){
-        clickCounter++
+    //pq N TA FUNCIONANDO ESSA FUNCAO?P
+    boxElement.onclick = function(){
+        alert()
     }
+
+    console.log(clickCounter);
 
     if(clickCounter == 0 || clickCounter == 2 || clickCounter == 4 || clickCounter == 6 || clickCounter == 8){
         boxElement.onclick = function(){
