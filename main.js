@@ -12,8 +12,7 @@ for(let contador = 0; contador < boxList.length; contador ++){
         } else {
             boxElement.classList.add('O');
             clickCounter++;
-            console.log(clickCounter);
-        }
+            console.log(clickCounter);            }
     }
     console.log(clickCounter)
 }
