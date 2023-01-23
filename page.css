@@ -13,3 +13,11 @@ td {
 	position: relative;
 	padding-top: 30%;
 }
+
+.X {
+	background: red;
+}
+
+.O {
+	background: blue;
+}
