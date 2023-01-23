@@ -14,10 +14,11 @@ td {
 	padding-top: 30%;
 }
 
-.X {
-	background: red;
+.X::after {
+	content: "X";
+	margin: 0 0 0 0;
 }
 
-.O {
-	background: blue;
+.O::after {
+	content: "O";
 }
