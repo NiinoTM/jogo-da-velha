@@ -1,24 +1,17 @@
-body {
-	margin-top: 10%;
+.container {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	margin: 40px auto;
+	width: calc(90px * 5);
 }
 
-table {
-	margin-top: 50px;
-	width: 30%;
-	margin: 0 auto;
-}
-
-td {
+.box  {
+	width: 150px;
+	height: 90px;
 	border: solid 1px black;
-	position: relative;
-	padding-top: 30%;
+	text-align: center;
+	padding-top: 60px;
+	font-size: 45px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.X::after {
-	content: "X";
-	margin: 0 0 0 0;
-}
-
-.O::after {
-	content: "O";
-}

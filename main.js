@@ -1,26 +1,27 @@
-let xLimit = [];
-let oLimit = [];
-
+const X = "X"
+const O = "O"
+const xLimit = [];
+const oLimit = [];
 const boxList = document.querySelectorAll('.box')
 
 for(let i = 0; i < boxList.length; i++){
-    xLimit.push("disabled");
-    oLimit.push("disabled");
+    xLimit.push("empty");
+    oLimit.push("empty");
 }
 
 boxList.forEach( (box, i) => box.onclick = function(){
-    function numberOfItems(limitList){
-        return limitList.filter( (value) => value !== "disabled").length
+    function numberOfItems(list){
+        return list.filter( (value) => value !== "empty").length
     }
 
     if(numberOfItems(xLimit) == numberOfItems(oLimit)){
-        if(xLimit[i] === "disabled" && oLimit[i] === "disabled"){
-            box.innerHTML = "x";
+        if(xLimit[i] === "empty" && oLimit[i] === "empty"){
+            box.innerHTML = X;
             xLimit.splice(i, 1, "x");
         }
     } else {
-        if(oLimit[i] === "disabled" && xLimit[i] === "disabled"){
-            box.innerHTML = "o";
+        if(oLimit[i] === "empty" && xLimit[i] === "empty"){
+            box.innerHTML = O;
             oLimit.splice(i, 1, "o");
         }
     }
