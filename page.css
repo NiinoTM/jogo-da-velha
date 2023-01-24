@@ -8,10 +8,25 @@
 .box  {
 	width: 150px;
 	height: 90px;
-	border: solid 1px black;
+	border:solid 2px black;
 	text-align: center;
 	padding-top: 60px;
 	font-size: 45px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#box_1,#box_2,#box_3 {
+	border-top: transparent;
+}
+
+#box_1,#box_4,#box_7 {
+	border-left: transparent;
+}
+
+#box_3,#box_6,#box_9 {
+	border-right: transparent;
+}
+
+#box_7,#box_8,#box_9 {
+	border-bottom: transparent;
+}
