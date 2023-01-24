@@ -1,18 +1,27 @@
-let clickCounter = 0
+let xLimit = [];
+let oLimit = [];
+
 const boxList = document.querySelectorAll('.box')
 
-
-for(let contador = 0; contador < boxList.length; contador ++){
-    const boxElement = boxList[contador];
-    boxElement.onclick = function(){
-        if(clickCounter == 0 || clickCounter == 2 || clickCounter == 4 || clickCounter == 6 || clickCounter == 8){
-            boxElement.classList.add('X');   
-            clickCounter ++;
-            console.log(clickCounter);
-        } else {
-            boxElement.classList.add('O');
-            clickCounter++;
-            console.log(clickCounter);            }
-    }
-    console.log(clickCounter)
+for(let i = 0; i < boxList.length; i++){
+    xLimit.push("disabled");
+    oLimit.push("disabled");
 }
+
+boxList.forEach( (box, i) => box.onclick = function(){
+    function numberOfItems(limitList){
+        return limitList.filter( (value) => value !== "disabled").length
+    }
+
+    if(numberOfItems(xLimit) == numberOfItems(oLimit)){
+        if(xLimit[i] === "disabled" && oLimit[i] === "disabled"){
+            box.innerHTML = "x";
+            xLimit.splice(i, 1, "x");
+        }
+    } else {
+        if(oLimit[i] === "disabled" && xLimit[i] === "disabled"){
+            box.innerHTML = "o";
+            oLimit.splice(i, 1, "o");
+        }
+    }
+})
